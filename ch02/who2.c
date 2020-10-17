@@ -55,7 +55,7 @@ int main(){
 	exit(1);
     }
 
-    while( read(utmpfd, &current_record, reclen) == sizeof(utbuf) )
+    while( read(utmpfd, &utbuf, sizeof(utbuf)) == sizeof(utbuf) )
 	show_info(&utbuf);
     close(utmpfd);
 
