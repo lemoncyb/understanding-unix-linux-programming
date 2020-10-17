@@ -47,7 +47,7 @@ void showtime(long timeval){
 }
 
 int main(){
-    struct utmp  current_record;  /* read info into here */
+    struct utmp  utbuf;  /* read info into here */
     int          utmpfd;          /* read from this descriptor */
 
     if ( (utmpfd = open(UTMP_FILE, O_RDONLY)) == -1 ){
